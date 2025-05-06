@@ -9,4 +9,12 @@ class Controller:
         self._model = model
 
     def handleCalcola(self, e):
-        pass
+        anno = self._view._txtAnno.value
+        if anno != ""  and int(anno)<= 2016 and int(anno)>=1816:
+            self._model.calcola(anno)
+        else:
+            self._view.create_alert("anno non valido")
+
+
+
+
